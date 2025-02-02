@@ -1,0 +1,17 @@
+#sample requests to test GET and POST methods
+
+curl --location 'http://localhost:777/my_post' \
+--header 'Content-Type: application/json' \
+--data '{
+    "bool_": true,
+    "number_": 17,
+    "string_": "some string"
+}'
+
+curl --location 'http://localhost:777/my_post' \
+--header 'Content-Type: text/plain' \
+--data '{
+    "bool_": true,
+    "number_": 17,
+    "string_": "some string"
+}'

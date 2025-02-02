@@ -1,0 +1,7 @@
+#build image
+docker build --tag web_host_app .
+
+#run comtainer 
+#80 port which we use from outside to reach inside one
+#50505 port we exposing from container (see dockerfile)
+docker run --publish 80:50505 web_host_ap
