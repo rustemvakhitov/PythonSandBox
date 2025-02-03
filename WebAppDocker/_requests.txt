@@ -1,6 +1,11 @@
 #sample requests to test GET and POST methods
 
-curl --location 'http://localhost:777/my_post' \
+#GET
+http://localhost:777/my_getU/333/777
+
+http://localhost:777/my_getP?param1=param1_value&param2=param2_value
+
+curl --location --request GET 'http://localhost:777/my_getB' \
 --header 'Content-Type: application/json' \
 --data '{
     "bool_": true,
@@ -8,7 +13,13 @@ curl --location 'http://localhost:777/my_post' \
     "string_": "some string"
 }'
 
-curl --location 'http://localhost:777/my_post' \
+#POST
+
+http://localhost:777/my_postU/333/444
+
+http://localhost:777/my_postP?param1=param1_value&param2=param2_value
+
+curl --location 'http://localhost:777/my_postB' \
 --header 'Content-Type: text/plain' \
 --data '{
     "bool_": true,
